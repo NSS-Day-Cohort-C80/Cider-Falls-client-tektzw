@@ -262,13 +262,17 @@ const database = {
 };
 
 export const getGuest = () => {
-  return structuredClone(database.guests);
+  return structuredClone(database.guest);
 };
 
 export const getService = () => {
-  return structuredClone(database.services);
+  return structuredClone(database.service);
 };
 
 export const getParkAreaService = () => {
-  return structuredClone(database.parkAreaServices);
+  return structuredClone(database.parkAreaService);
+};
+
+export const getParkArea = () => {
+  return structuredClone(database.parkArea);
 };
