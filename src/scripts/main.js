@@ -1,41 +1,17 @@
 import {
-  getGuest,
   getService,
   getParkAreaService,
   getParkArea,
 } from "./data.js";
+import { guestList } from "./guest.js"
+import { ParkAreaServiceList } from "./areas.js"
 
-// guests html generate
-export const guestList = () => {
-  let guestHTML = "<ul>";
-  for (const guest of getGuest()) {
-    guestHTML += `<li>${guest.name}</li>`;
-  }
-  guestHTML += "</ul>";
-  return guestHTML;
-};
+const areas = getParkArea()
+const parkAreaServices = getParkAreaService()
+const services = getService()
+const guests = guestList()
+const parkAreaServiceGet = ParkAreaServiceList()
 
-//areas html generate function
-export const ParkAreaServiceList = () => {
-  let parkAreaHTML = "<ul>";
-  for (const area of getParkArea()) {
-    parkAreaHTML += `<h2>${area.name}</h2>`;
-    for (const parkAreaService of getParkAreaService()) {
-      let service = getService();
-      if (area.id === parkAreaService.parkAreaId) {
-        if (getParkAreaService.serviceId === service.id) {
-          parkAreaHTML += `
-          <li>
-           ${service.name} \n
-          </li>
-        `;
-        }
-      }
-    }
-  }
-  parkAreaHTML += "</ul>";
-  return parkAreaHTML;
-};
 
 const mainContainer = document.querySelector("#container");
 
@@ -57,9 +33,9 @@ const applicationHTML = `
 
 mainContainer.innerHTML = applicationHTML;
 
-export const renderParkToDOM = () => {
+const renderParkToDOM = () => {
   document.getElementById("guest").innerHTML = getGuest();
   document.getElementById("area").innerHTML = getParkArea();
   document.getElementById("service").innerHTML = getService();
-  document.getElementById("park-area-service").innerHTML = getParkAreaService();
+  document.getElementById("park-area-service").innerHTML = getParkAreaServices();
 };

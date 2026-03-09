@@ -148,115 +148,121 @@ const database = {
   ],
 
   parkAreaService: [
-    {
+    { //parkArea: Lodge
       id: 1,
       parkAreaId: 1,
-      serviceId: 11,
+      serviceId: 11, //lodging
     },
     {
       id: 2,
       parkAreaId: 1,
-      serviceId: 12,
+      serviceId: 12, //parking
     },
     {
       id: 3,
       parkAreaId: 1,
-      serviceId: 8,
+      serviceId: 8, //information
     },
     {
       id: 4,
       parkAreaId: 1,
-      serviceId: 5,
+      serviceId: 5, //picnicking
     },
     {
       id: 5,
       parkAreaId: 1,
-      serviceId: 9,
+      serviceId: 9, //hotel
     },
     {
       id: 6,
       parkAreaId: 1,
-      serviceId: 10,
+      serviceId: 10, //restaurant
     },
-    {
+    { //parkArea: Lost Wolf Hiking
       id: 7,
       parkAreaId: 2,
-      serviceId: 4,
+      serviceId: 4, //hiking
     },
     {
       id: 8,
       parkAreaId: 2,
-      serviceId: 5,
+      serviceId: 5, //picnicking
     },
     {
       id: 9,
       parkAreaId: 2,
-      serviceId: 6,
+      serviceId: 6, //rock climbing
     },
-    {
+    { //parkArea: Chamfort River
       id: 10,
       parkAreaId: 3,
-      serviceId: 1,
+      serviceId: 1, //rafting
     },
     {
       id: 11,
       parkAreaId: 3,
-      serviceId: 2,
+      serviceId: 2, //canoeing
     },
     {
       id: 12,
       parkAreaId: 3,
-      serviceId: 3,
+      serviceId: 3, //fishing
     },
-    {
+    { // parkArea: Gander River
       id: 13,
       parkAreaId: 4,
-      serviceId: 3,
+      serviceId: 3, //fishing
     },
     {
       id: 14,
       parkAreaId: 4,
-      serviceId: 4,
+      serviceId: 4, //hiking
     },
-    {
+    { //parkArea: Campgrounds
       id: 15,
       parkAreaId: 5,
-      serviceId: 8,
+      serviceId: 8, //information
     },
     {
       id: 16,
       parkAreaId: 5,
-      serviceId: 11,
+      serviceId: 11, //lodging
     },
     {
       id: 17,
       parkAreaId: 5,
-      serviceId: 12,
+      serviceId: 12, //parking
     },
+    { 
+      id: 24,
+      parkAreaId: 5,
+      serviceId: 13 //office park
+    },
+
     {
       id: 19,
       parkAreaId: 5,
-      serviceId: 14,
+      serviceId: 14, //childrens play area
     },
-    {
+    { //parkArea: Pine Bluff Trails
       id: 20,
       parkAreaId: 6,
-      serviceId: 4,
+      serviceId: 4, //hiking
     },
     {
       id: 21,
       parkAreaId: 6,
-      serviceId: 5,
+      serviceId: 5, //picnicking
     },
     {
       id: 22,
       parkAreaId: 6,
-      serviceId: 7,
+      serviceId: 7, //zip lines
     },
     {
       id: 23,
       parkAreaId: 6,
-      serviceId: 15,
+      serviceId: 15, //food vendors
     },
   ],
 };
