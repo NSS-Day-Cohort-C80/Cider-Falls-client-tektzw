@@ -14,8 +14,8 @@ export const guestList = () => {
   const itemClicked = clickEvent.target;
 
   if (itemClicked.dataset.type === "guest") {
-    for (const guest of celebrities) {
-      if (celebrity.id === parseInt(itemClicked.dataset.id)) {
+    for (const guest of guests) {
+      if (guest.id === parseInt(itemClicked.dataset.id)) {
         window.alert(`${celebrity.name} is a ${celebrity.sport} star`);
       }
     }
