@@ -1,41 +1,27 @@
-import {
-  getService,
-  getParkAreaService,
-  getParkArea,
-} from "./data.js";
 import { guestList } from "./guest.js"
-import { ParkAreaServiceList } from "./areas.js"
-
-const areas = getParkArea()
-const parkAreaServices = getParkAreaService()
-const services = getService()
-const guests = guestList()
-const parkAreaServiceGet = ParkAreaServiceList()
+import { ServiceList, ParkAreaServiceList } from "./ParkArea.js"
 
 
 const mainContainer = document.querySelector("#container");
 
 const applicationHTML = `
-    <h1>Cider Falls Park</h1>
-    <article class="details">
-        <section class="detail--column list details__ParkAreaServiceList">
-            <h2></h2>
+   <div class="header">
+        <div class="logo">LOGO</div>
+        <h1>Cider Falls Park</h1>
+   </div> <div class="main-layout">
+        <div class="park-areas">
+            ${ServiceList()}
             ${ParkAreaServiceList()}
-        </section>
-    </article>
-
-    <article class="guest">
-    <section class="detail--column details__guest">
+        </div>
+        <div class="guests">
         <h2>Guest List</h2>
-        ${guestList()}
-    </section></article>
-`;
+            ${guestList()}
+        </div>
+    </div>
+    <p>
+     <footer>
+        000-000-0000 | ciderfalls@ciderfalls.park | 1223 Cider Falls Boulevard, Cider Falls, Utah, USA 22990
+    </footer></p>
+`
 
 mainContainer.innerHTML = applicationHTML;
-
-const renderParkToDOM = () => {
-  document.getElementById("guest").innerHTML = getGuest();
-  document.getElementById("area").innerHTML = getParkArea();
-  document.getElementById("service").innerHTML = getService();
-  document.getElementById("park-area-service").innerHTML = getParkAreaServices();
-};

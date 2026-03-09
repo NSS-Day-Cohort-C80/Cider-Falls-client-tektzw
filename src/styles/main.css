@@ -1,9 +1,37 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+.header {
+  display: flex;
+  align-items: center;
 }
 
-html, body {
-    height: 100%;
+.logo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 10px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+}
+
+.main-layout {
+  display: flex;
+}
+
+.park-areas {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+.park-area {
+  width: 33%;
+}
+
+.guests {
+  width: 200px;
+}
+
+footer {
+  text-align: center;
 }
