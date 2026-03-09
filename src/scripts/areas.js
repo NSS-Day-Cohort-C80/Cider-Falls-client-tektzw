@@ -26,7 +26,7 @@ for (const parkAreaService of parkAreaServices) {
   export const ParkAreaServiceList = () => {
   let parkAreaHTML = "<ul>";
   for (const area of areas) {
-    parkAreaHTML += `<h2>${area.name}</h2>`;
+    parkAreaHTML += `<h2 data-type="area" data-id="${area.id}">${area.name}</h2>`;
     const matches = findServiceMatch(area, services, parkAreaServices)
     const serviceName = matches.map((service)=>{
     return `${service.name}`})

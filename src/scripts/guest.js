@@ -1,5 +1,6 @@
 import { getGuest } from "./data.js";
 
+const guests = getGuest()
 
 export const guestList = () => {
   let guestHTML = "<ul>";
@@ -10,15 +11,22 @@ export const guestList = () => {
   return guestHTML;
 };
 
-/* document.addEventListener("click", (clickEvent) => {
+
+const guestCount = (parkAreaId) => {
+    let amountOfGuests = 0;
+    for (const guest of guests){
+        if (guest.parkAreaId === parkAreaId) {
+        amountOfGuests++;
+        }
+    }
+        return amountOfGuests;
+};
+
+document.addEventListener("click", (clickEvent) => {
   const itemClicked = clickEvent.target;
 
-  if (itemClicked.dataset.type === "guest") {
-    for (const guest of guests) {
-      if (guest.id === parseInt(itemClicked.dataset.id)) {
-        window.alert(`${celebrity.name} is a ${celebrity.sport} star`);
-      }
-    }
+  if (itemClicked.dataset.type === "area") {
+    const howManyGuests = guestCount(parseInt(itemClicked.dataset.id));
+    window.alert(`There are ${howManyGuests} guests in this area`);
   }
 });
-*/
